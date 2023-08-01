@@ -1,8 +1,9 @@
 import {Button, Text, View} from "react-native";
 import {useNavigation} from "@react-navigation/native";
+import {useScreenGuard} from "../hooks/useScreenGuard";
 
 export function ScreenB(){
-    const {navigate} = useNavigation();
+    useScreenGuard('screenB')
 
     return (
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
